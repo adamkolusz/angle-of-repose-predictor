@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Adam Kolusz">
+  <title>Angle of Repose Prediction for DEM simulation</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Angle of Repose predictor for DEM simulation parameters</h1>
+    <h3>Adam Kolusz<h3>
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="fric_coeff" placeholder="Friction Coefficient" required="required" /><br>
+    	<input type="text" name="adh_dist" placeholder="Adhesive Distance" required="required" /><br>
+      <input type="text" name="force_frac" placeholder="Force Fraction" required="required" /><br>
+      <input type="text" name="rest_coeff" placeholder="Restitution Coefficient" required="required" /><br>
+      <input type="text" name="roll_resist" placeholder="Rolling Resistance" required="required" /><br>
+      <input type="text" name="tang_stiff" placeholder="Tangential Stiffness Ratio" required="required" /><br>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{prediction_text}}
+   
+ </div>
+ 
+</body>
+</html>
