@@ -18,12 +18,12 @@
 	<h1>Angle of Repose predictor for DEM simulation parameters</h1>
     <h3>Adam Kolusz<h3>
     <form action="{{ url_for('predict')}}"method="post">
-      <input type="text" name="fric_coeff" placeholder="Friction Coefficient" required="required" /><br>
-    	<input type="text" name="adh_dist" placeholder="Adhesive Distance" required="required" /><br>
-      <input type="text" name="force_frac" placeholder="Force Fraction" required="required" /><br>
-      <input type="text" name="rest_coeff" placeholder="Restitution Coefficient" required="required" /><br>
-      <input type="text" name="roll_resist" placeholder="Rolling Resistance" required="required" /><br>
-      <input type="text" name="tang_stiff" placeholder="Tangential Stiffness Ratio" required="required" /><br>
+      <input type="text" name="fric_coeff" placeholder="Friction Coefficient [0.2-0.5]" required="required" /><br>
+    	<input type="text" name="adh_dist" placeholder="Adhesive Distance [0.0005-0.0015]" required="required" /><br>
+      <input type="text" name="force_frac" placeholder="Force Fraction  [0.1-0.4]" required="required" /><br>
+      <input type="text" name="rest_coeff" placeholder="Restitution Coefficient  [0.1-0.4]" required="required" /><br>
+      <input type="text" name="roll_resist" placeholder="Rolling Resistance  [0.2-0.8]" required="required" /><br>
+      <input type="text" name="tang_stiff" placeholder="Tangential Stiffness Ratio  [0.2-1.0]" required="required" /><br>
 
       <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
